@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shanelle Operio | Frontend Developer · Data Analyst · UI/UX Designer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+
+  <!-- ═══ NAV ═══ -->
+  <nav class="navbar" id="navbar">
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#hero"         class="nav-link active">Home</a></li>
+      <li><a href="#about"        class="nav-link">About</a></li>
+      <li><a href="#skills"       class="nav-link">Skills</a></li>
+      <li><a href="#projects"     class="nav-link">Projects</a></li>
+      <li><a href="#certificates" class="nav-link">Certificates</a></li>
+      <li><a href="#events"       class="nav-link">Events</a></li>
+      <li><a href="#contact"      class="nav-link">Contact</a></li>
+      <li><a href="#connect"      class="nav-link">Connect</a></li>
+    </ul>
+    <!-- Theme toggle sits right inside nav, after links -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <i class="fas fa-sun" id="themeIcon"></i>
+    </button>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-grid"></div>
+
+    <div class="hero-content">
+      <div class="hero-text">
+        <p class="hero-greeting">Hello, I'm</p>
+        <h1 class="hero-name">Shanelle<br><span class="name-accent">Operio</span></h1>
+        <div class="hero-roles">
+          <span class="role-tag">Frontend Developer</span>
+          <span class="role-divider">|</span>
+          <span class="role-tag">Data Analyst</span>
+          <span class="role-divider">|</span>
+          <span class="role-tag">UI/UX Designer</span>
+        </div>
+        <p class="hero-tagline">
+          I turn raw data into decisions<br>and ideas into interfaces that <em>actually work.</em>
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-outline">
+            <i class="fas fa-briefcase"></i> Hire Me
+          </a>
+          <!-- Replace assets/resume/resume.pdf with your actual resume file path -->
+          <a href="assets/resume/resume.pdf" class="btn btn-outline" download>
+            <i class="fas fa-file-arrow-down"></i> Download Resume
+          </a>
+        </div>
+      </div>
+
+      <!-- Profile photo — replace assets/images/profile.jpg with your photo -->
+      <div class="hero-photo">
+        <img
+          src="assets/images/profile.jpg"
+          alt="Shanelle Operio"
+          onerror="this.style.display='none'; document.getElementById('photoFallback').style.display='flex'"
+        />
+        <div class="photo-fallback" id="photoFallback">SO</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ ABOUT ═══ -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Who I Am</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-visual">
+          <div class="about-card-glow">
+            <div class="stat-block">
+              <span class="stat-num accent-1">3+</span>
+              <span class="stat-label">Disciplines</span>
+            </div>
+            <div class="stat-block">
+              <span class="stat-num accent-2">∞</span>
+              <span class="stat-label">Curiosity</span>
+            </div>
+            <div class="stat-block">
+              <span class="stat-num accent-3">100%</span>
+              <span class="stat-label">Committed</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-body">
+          <p class="about-lead">I'm a multidisciplinary IT professional who lives at the intersection of
+            <strong>design</strong>, <strong>data</strong>, and <strong>development</strong>.
+          </p>
+          <p>As a frontend developer, I craft responsive, pixel-perfect interfaces that users enjoy navigating. As a data analyst, I decode complex datasets and translate them into actionable insights. As a UI/UX designer, I bridge the gap between how something looks and how it truly feels.</p>
+          <p>My superpower? Thinking in systems. Whether it's a dashboard, an app, or a data pipeline — I design solutions that are elegant, efficient, and built to last.</p>
+          <div class="about-traits">
+            <div class="trait"><i class="fas fa-puzzle-piece"></i> Problem Solver</div>
+            <div class="trait"><i class="fas fa-lightbulb"></i> Creative Thinker</div>
+            <div class="trait"><i class="fas fa-database"></i> Data-Driven</div>
+            <div class="trait"><i class="fas fa-layer-group"></i> Detail-Oriented</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SKILLS ═══ -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Tech Stack</h2>
+      </div>
+      <div class="skills-grid">
+
+        <div class="skill-card" data-category="frontend">
+          <div class="skill-card-icon"><i class="fas fa-window-maximize"></i></div>
+          <h3>Frontend</h3>
+          <div class="skill-pills">
+            <span class="pill">HTML5</span><span class="pill">CSS3</span>
+            <span class="pill">JavaScript</span><span class="pill">React</span>
+          </div>
+        </div>
+
+        <div class="skill-card" data-category="backend">
+          <div class="skill-card-icon"><i class="fas fa-server"></i></div>
+          <h3>Backend / Programming</h3>
+          <div class="skill-pills">
+            <span class="pill">Node.js</span><span class="pill">Python</span><span class="pill">Java</span>
+          </div>
+        </div>
+
+        <div class="skill-card" data-category="frameworks">
+          <div class="skill-card-icon"><i class="fas fa-cubes"></i></div>
+          <h3>Frameworks</h3>
+          <div class="skill-pills"><span class="pill">Flask</span></div>
+        </div>
+
+        <div class="skill-card" data-category="data">
+          <div class="skill-card-icon"><i class="fas fa-chart-bar"></i></div>
+          <h3>Data Analytics</h3>
+          <div class="skill-pills">
+            <span class="pill">Python</span><span class="pill">MySQL</span>
+            <span class="pill">Pandas</span><span class="pill">NumPy</span>
+            <span class="pill">Data Visualization</span>
+          </div>
+        </div>
+
+        <div class="skill-card" data-category="design">
+          <div class="skill-card-icon"><i class="fas fa-pen-ruler"></i></div>
+          <h3>UI/UX Design</h3>
+          <div class="skill-pills">
+            <span class="pill">Figma</span><span class="pill">Wireframing</span><span class="pill">Prototyping</span>
+          </div>
+        </div>
+
+        <div class="skill-card" data-category="tools">
+          <div class="skill-card-icon"><i class="fas fa-wrench"></i></div>
+          <h3>Tools & Other</h3>
+          <div class="skill-pills">
+            <span class="pill">Git & GitHub</span><span class="pill">REST APIs</span>
+            <span class="pill">JSON</span><span class="pill">Responsive Design</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PROJECTS ═══
+       1 image per project card.
+       Replace each src below with your actual project screenshot.
+       Format: assets/projects/project1.jpg, project2.jpg, etc.
+       Replace href="#" on Live Demo links with your actual deployed URL.
+       Replace GitHub hrefs with your actual repo links.
+  ═══ -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">My Work</h2>
+        <p class="section-sub">Real projects coming soon — stay tuned.</p>
+      </div>
+      <div class="projects-grid">
+
+        <!-- PROJECT 1 ─ replace image, title, desc, stack, links -->
+        <div class="project-card">
+          <div class="proj-img-wrap">
+            <!-- Replace src with: assets/projects/project1.jpg -->
+            <img src="assets/projects/project1.jpg" alt="Project 1 screenshot"
+              onerror="this.parentElement.classList.add('img-placeholder')" />
+          </div>
+          <div class="project-body">
+            <div class="project-card-top">
+              <h3 class="project-title">Project Title</h3>
+              <div class="project-links">
+                <!-- Replace href with your GitHub repo URL -->
+                <a href="https://github.com/shanelleoperio" target="_blank" class="icon-btn" title="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+                <!-- Replace href="#" with your live demo URL -->
+                <a href="#" target="_blank" class="icon-btn live-demo-btn" title="Live Demo">
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </div>
+            <p class="project-desc">A brief description of what this project does and the problem it solves.</p>
+            <div class="project-stack">
+              <span class="stack-tag">React</span><span class="stack-tag">Node.js</span><span class="stack-tag">MySQL</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 2 ─ replace image, title, desc, stack, links -->
+        <div class="project-card">
+          <div class="proj-img-wrap">
+            <!-- Replace src with: assets/projects/project2.jpg -->
+            <img src="assets/projects/project2.jpg" alt="Project 2 screenshot"
+              onerror="this.parentElement.classList.add('img-placeholder')" />
+          </div>
+          <div class="project-body">
+            <div class="project-card-top">
+              <h3 class="project-title">Project Title</h3>
+              <div class="project-links">
+                <a href="https://github.com/shanelleoperio" target="_blank" class="icon-btn" title="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="#" target="_blank" class="icon-btn live-demo-btn" title="Live Demo">
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </div>
+            <p class="project-desc">A brief description of what this project does and the problem it solves.</p>
+            <div class="project-stack">
+              <span class="stack-tag">Python</span><span class="stack-tag">Flask</span><span class="stack-tag">Pandas</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 3 ─ replace image, title, desc, stack, links -->
+        <div class="project-card">
+          <div class="proj-img-wrap">
+            <!-- Replace src with: assets/projects/project3.jpg -->
+            <img src="assets/projects/project3.jpg" alt="Project 3 screenshot"
+              onerror="this.parentElement.classList.add('img-placeholder')" />
+          </div>
+          <div class="project-body">
+            <div class="project-card-top">
+              <h3 class="project-title">Project Title</h3>
+              <div class="project-links">
+                <a href="https://github.com/shanelleoperio" target="_blank" class="icon-btn" title="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="#" target="_blank" class="icon-btn live-demo-btn" title="Live Demo">
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </div>
+            <p class="project-desc">A brief description of what this project does and the problem it solves.</p>
+            <div class="project-stack">
+              <span class="stack-tag">Figma</span><span class="stack-tag">JavaScript</span><span class="stack-tag">CSS3</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 4 ─ replace image, title, desc, stack, links -->
+        <div class="project-card">
+          <div class="proj-img-wrap">
+            <!-- Replace src with: assets/projects/project4.jpg -->
+            <img src="assets/projects/project4.jpg" alt="Project 4 screenshot"
+              onerror="this.parentElement.classList.add('img-placeholder')" />
+          </div>
+          <div class="project-body">
+            <div class="project-card-top">
+              <h3 class="project-title">Project Title</h3>
+              <div class="project-links">
+                <a href="https://github.com/shanelleoperio" target="_blank" class="icon-btn" title="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="#" target="_blank" class="icon-btn live-demo-btn" title="Live Demo">
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </div>
+            <p class="project-desc">A brief description of what this project does and the problem it solves.</p>
+            <div class="project-stack">
+              <span class="stack-tag">Java</span><span class="stack-tag">MySQL</span><span class="stack-tag">REST API</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 5 ─ replace image, title, desc, stack, links -->
+        <div class="project-card">
+          <div class="proj-img-wrap">
+            <!-- Replace src with: assets/projects/project5.jpg -->
+            <img src="assets/projects/project5.jpg" alt="Project 5 screenshot"
+              onerror="this.parentElement.classList.add('img-placeholder')" />
+          </div>
+          <div class="project-body">
+            <div class="project-card-top">
+              <h3 class="project-title">Project Title</h3>
+              <div class="project-links">
+                <a href="https://github.com/shanelleoperio" target="_blank" class="icon-btn" title="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="#" target="_blank" class="icon-btn live-demo-btn" title="Live Demo">
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </div>
+            <p class="project-desc">A brief description of what this project does and the problem it solves.</p>
+            <div class="project-stack">
+              <span class="stack-tag">NumPy</span><span class="stack-tag">Python</span><span class="stack-tag">Data Viz</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 6 ─ replace image, title, desc, stack, links -->
+        <div class="project-card">
+          <div class="proj-img-wrap">
+            <!-- Replace src with: assets/projects/project6.jpg -->
+            <img src="assets/projects/project6.jpg" alt="Project 6 screenshot"
+              onerror="this.parentElement.classList.add('img-placeholder')" />
+          </div>
+          <div class="project-body">
+            <div class="project-card-top">
+              <h3 class="project-title">Project Title</h3>
+              <div class="project-links">
+                <a href="https://github.com/shanelleoperio" target="_blank" class="icon-btn" title="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="#" target="_blank" class="icon-btn live-demo-btn" title="Live Demo">
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </div>
+            <p class="project-desc">A brief description of what this project does and the problem it solves.</p>
+            <div class="project-stack">
+              <span class="stack-tag">React</span><span class="stack-tag">Figma</span><span class="stack-tag">Node.js</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CERTIFICATES ═══
+       1 image per certificate card.
+       Replace each src with: assets/certificates/cert1.jpg, cert2.jpg, etc.
+       Replace "Certificate Title" text with the actual certificate name.
+       The image fills the card fully — use landscape/horizontal cert images for best fit.
+  ═══ -->
+  <section class="section section-alt" id="certificates">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Credentials</h2>
+      </div>
+      <div class="cert-grid">
+
+        <!-- CERT 1 ─ replace src and title -->
+        <div class="cert-card" onclick="openLightbox('assets/certificates/cert1.jpg', 'Certificate Title 1')">
+          <div class="cert-img-wrap">
+            <!-- Replace src with: assets/certificates/cert1.jpg -->
+            <img src="assets/certificates/certificate.jpg" alt="Certificate 1"
+              onerror="this.parentElement.classList.add('cert-placeholder')" />
+            <div class="cert-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+          <p class="cert-name">CID</p>
+        </div>
+
+        <!-- CERT 2 ─ replace src and title -->
+        <div class="cert-card" onclick="openLightbox('assets/certificates/cert2.jpg', 'Certificate Title 2')">
+          <div class="cert-img-wrap">
+            <!-- Replace src with: assets/certificates/cert2.jpg -->
+            <img src="assets/certificates/cert2.jpg" alt="Certificate 2"
+              onerror="this.parentElement.classList.add('cert-placeholder')" />
+            <div class="cert-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+          <p class="cert-name">Certificate Title</p>
+        </div>
+
+        <!-- CERT 3 ─ replace src and title -->
+        <div class="cert-card" onclick="openLightbox('assets/certificates/cert3.jpg', 'Certificate Title 3')">
+          <div class="cert-img-wrap">
+            <!-- Replace src with: assets/certificates/cert3.jpg -->
+            <img src="assets/certificates/cert3.jpg" alt="Certificate 3"
+              onerror="this.parentElement.classList.add('cert-placeholder')" />
+            <div class="cert-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+          <p class="cert-name">Certificate Title</p>
+        </div>
+
+        <!-- CERT 4 ─ replace src and title -->
+        <div class="cert-card" onclick="openLightbox('assets/certificates/cert4.jpg', 'Certificate Title 4')">
+          <div class="cert-img-wrap">
+            <!-- Replace src with: assets/certificates/cert4.jpg -->
+            <img src="assets/certificates/cert4.jpg" alt="Certificate 4"
+              onerror="this.parentElement.classList.add('cert-placeholder')" />
+            <div class="cert-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+          <p class="cert-name">Certificate Title</p>
+        </div>
+
+        <!-- CERT 5 ─ replace src and title -->
+        <div class="cert-card" onclick="openLightbox('assets/certificates/cert5.jpg', 'Certificate Title 5')">
+          <div class="cert-img-wrap">
+            <!-- Replace src with: assets/certificates/cert5.jpg -->
+            <img src="assets/certificates/cert5.jpg" alt="Certificate 5"
+              onerror="this.parentElement.classList.add('cert-placeholder')" />
+            <div class="cert-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+          <p class="cert-name">Certificate Title</p>
+        </div>
+
+        <!-- CERT 6 ─ replace src and title -->
+        <div class="cert-card" onclick="openLightbox('assets/certificates/cert6.jpg', 'Certificate Title 6')">
+          <div class="cert-img-wrap">
+            <!-- Replace src with: assets/certificates/cert6.jpg -->
+            <img src="assets/certificates/cert6.jpg" alt="Certificate 6"
+              onerror="this.parentElement.classList.add('cert-placeholder')" />
+            <div class="cert-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+          <p class="cert-name">Certificate Title</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()"><i class="fas fa-xmark"></i></button>
+    <img src="" alt="" id="lightboxImg" />
+    <p id="lightboxCaption"></p>
+  </div>
+
+  <!-- ═══ EVENTS ═══
+       1 image per slide (simple sliding carousel).
+       Replace each src with: assets/images/event1.jpg, event2.jpg, etc.
+       Replace "Event / Seminar Title" and description text.
+  ═══ -->
+  <section class="section" id="events">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Highlights</h2>
+      </div>
+      <div class="carousel-wrap">
+        <button class="carousel-btn prev-btn" id="prevBtn" aria-label="Previous">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="carousel-viewport">
+          <div class="carousel-track" id="carouselTrack">
+
+            <!-- EVENT 1 ─ replace src, title, description -->
+            <div class="carousel-slide">
+              <div class="slide-img-wrap">
+                <!-- Replace src with: assets/images/event1.jpg -->
+                <img src="assets/events/event.jpg" alt="Event 1"
+                  onerror="this.parentElement.classList.add('slide-placeholder')" />
+              </div>
+              <div class="slide-caption">
+                <h4>Event / Seminar Title</h4>
+                <p>Short description of the event, location, or what you gained from it.</p>
+              </div>
+            </div>
+
+            <!-- EVENT 2 ─ replace src, title, description -->
+            <div class="carousel-slide">
+              <div class="slide-img-wrap">
+                <!-- Replace src with: assets/images/event2.jpg -->
+                <img src="assets/events/event1.jpg" alt="Event 2"
+                  onerror="this.parentElement.classList.add('slide-placeholder')" />
+              </div>
+              <div class="slide-caption">
+                <h4>Event / Seminar Title</h4>
+                <p>Short description of the event, location, or what you gained from it.</p>
+              </div>
+            </div>
+
+            <!-- EVENT 3 ─ replace src, title, description -->
+            <div class="carousel-slide">
+              <div class="slide-img-wrap">
+                <!-- Replace src with: assets/images/event3.jpg -->
+                <img src="assets/events/event2.jpg" alt="Event 3"
+                  onerror="this.parentElement.classList.add('slide-placeholder')" />
+              </div>
+              <div class="slide-caption">
+                <h4>Event / Seminar Title</h4>
+                <p>Short description of the event, location, or what you gained from it.</p>
+              </div>
+            </div>
+
+            <!-- EVENT 4 ─ replace src, title, description -->
+            <div class="carousel-slide">
+              <div class="slide-img-wrap">
+                <!-- Replace src with: assets/images/event4.jpg -->
+                <img src="assets/images/event4.jpg" alt="Event 4"
+                  onerror="this.parentElement.classList.add('slide-placeholder')" />
+              </div>
+              <div class="slide-caption">
+                <h4>Event / Seminar Title</h4>
+                <p>Short description of the event, location, or what you gained from it.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <button class="carousel-btn next-btn" id="nextBtn" aria-label="Next">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+        <div class="carousel-dots" id="carouselDots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACT ═══ -->
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Let's Work Together</h2>
+        <p class="section-sub">Got a project, idea, or opportunity? I'm all ears.</p>
+      </div>
+      <div class="contact-wrap">
+        <div class="contact-info">
+          <div class="contact-blurb">
+            <h3>Ready to build something great?</h3>
+            <p>Whether you need a sleek frontend, a data dashboard, or a full UI/UX redesign — let's make it happen.</p>
+          </div>
+          <div class="contact-details">
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <span>shanelleoperio@gmail.com</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Philippines</span>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="John Doe" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="john@example.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Project Inquiry" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-outline btn-full">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+          <p class="form-status" id="formStatus"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONNECT (social icons only) ═══
+       Replace each href with your actual profile URL.
+  ═══ -->
+  <section class="section" id="connect">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Connect</h2>
+      </div>
+      <div class="connect-icons">
+        <!-- Replace href with your actual GitHub URL -->
+        <a href="https://github.com/shanelleoperio" target="_blank" class="connect-icon" title="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <!-- Replace href with your actual LinkedIn URL -->
+        <a href="https://linkedin.com/in/shanelleoperio" target="_blank" class="connect-icon" title="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <!-- Replace href with your actual Instagram URL -->
+        <a href="https://instagram.com/shanelleoperio" target="_blank" class="connect-icon" title="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <!-- Add more icons below if needed, same pattern:
+        <a href="YOUR_URL" target="_blank" class="connect-icon" title="Platform Name">
+          <i class="fab fa-ICON-NAME"></i>
+        </a>
+        -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">© 2025 Shanelle Operio</p>
+        <a href="#hero" class="footer-top" aria-label="Back to top">
+          <i class="fas fa-chevron-up"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
